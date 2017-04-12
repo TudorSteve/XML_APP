@@ -1,0 +1,47 @@
+/* =COLORS====================================================*/
+.blue {
+  color: #048CB9; }
+
+.white {
+  color: white; }
+
+.blueback {
+  background-color: #048CB9; }
+
+/*==TEXT-ELEMENTS==============================================*/
+h1 {
+  text-shadow: -1px 0px 0px white, 0px 1px 0px white, 1px 0px 0px white, 0px -1px 0px white;
+  font-size: 10em;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%; }
+
+/*=====================================================*/
+.container {
+  height: 100vh;
+  width: 100%; }
+
+#paracontainer {
+  height: 100vh;
+  min-height: 100%;
+  width: 100%;
+  position: relative; }
+
+#parabackground {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover; }
+
+/*# sourceMappingURL=main.css.map */
+
+/*# sourceMappingURL=main.css.map */
