@@ -10,10 +10,10 @@
 
 {% block body %}
 
-<nav class="">
-  <ul class="row">
-    <li class="medium-offset-2 medium-2 large-2 columns"><a class="white" href="" >&lt Welcome &gt</a></li>
-    <li class="large-2 medium-2 columns"><a class="white"href="#" >&lt How it works &gt</a></li>
+<nav id="navbar" class="">
+  <ul class="row white">
+    <li class="medium-offset-2 medium-2 large-2 columns"><a class="" href="#" >&lt Welcome &gt</a></li>
+    <li class="large-2 medium-2 columns"><a class="white"href="#" ><span class="red">&lt</span> How it works <span class="red">&gt</span></a></li>
     <!-- <li>XML Formatter</li> -->
     <li class="large-2 medium-2 columns"><a class="white" href="#" >&lt Products &gt</a></li>
     <li class="large-2 medium-2 columns end"><a class="white" href="#" >&lt Contact &gt</a></li>
@@ -24,14 +24,14 @@
 
   <div id="parabackground" class="blueback">
     <article class="title white"> 
-      <div><h1>&lt XML Formatter &gt</h1></div>
+      <div><h1>&lt  XML Formatter &gt</h1></div>
       <h2>Powerful tool designed for files that matter</h2>
       <!-- meniul va fi cu font rosu si albastru text si brackets ca sa dam un effect de xml syntax -->
     </article>
   </div>
 
 </div>
-<div class="content-overlap whiteback">
+<div id="content-overlap" class="whiteback">
 <div class="container">
 
   <div class="row packs">
@@ -172,6 +172,25 @@
           modal.style.display = "none";
       }
     }
+
+  </script>
+
+  <script type="text/javascript">
+var toggleposition = document.getElementById("paracontainer").offsetHeight;
+var navbar = document.getElementById("navbar");
+var navlinks = document.getElementsByClassName("white");
+window.onscroll = function() {myFunction()};
+function myFunction() {
+
+    // if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+        if (document.body.scrollTop >= toggleposition-50) {
+        navbar.className = "whiteback";
+
+    } else {
+        navbar.className = navbar.className.replace("whiteback", "");
+    }
+    console.log(toggleposition);
+}
 
   </script>
 

@@ -31,7 +31,38 @@
     transform: rotate(360deg);
   }
 }
+/*=RESPONSIVE====================================*/
+@media screen and (max-width: 1200px) {
+    html {
+        font-size:85%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    html {
+        font-size:80%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    html {
+        font-size:75%;
+    }
+}
+@media screen and (max-width: 900px) {
+    html {
+        font-size:70%;
+    }
+}
 
+@media screen and (max-width: 800px) {
+    html {
+        font-size:60%;
+    }
+}
+// @media screen and (max-width: 700px) {
+//     html {
+//         font-size:60%;
+//     }
+// }
 /* =COLORS=====FONTS======================================*/
 $blue:#048CB9;
 .blue {
@@ -42,15 +73,16 @@ $blue:#048CB9;
 .red{
   color:#F30000;
 }
+span{
+font-weight: bold;
+}
 .blueback{
   background-color:$blue;
 }
 .whiteback{
   background-color:white;
 }
-html{
-  font-size:100%;
-}
+
 
 @font-face {
   font-family: 'Forza-Bold';
@@ -72,7 +104,7 @@ html{
 }
 h1{
   font-family: 'Forza-Bold' !important;
-  font-size:5rem;
+  font-size:6rem;
 }
 h2{
 font-family: 'Forza-Bold' !important;
@@ -80,15 +112,17 @@ font-size:3rem;
 }
 /*=====================================================*/
 nav{
-  
+    ul{
+      list-style-type:none;
+    }
+    a{
+      font-size:1.3rem;
+    }  
     position: fixed;
     top: 0;
     width: 100%;
     color: red;
     text-align: center;
-}
-nav ul{
-  list-style-type:none;
 }
 
 .container{
