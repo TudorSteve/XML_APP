@@ -10,30 +10,170 @@
 
 {% block body %}
 
-<div class="navbar">
+<nav class="">
   <ul class="row">
-    <li class="medium-offset-2 medium-2 large-2 columns"><a href="#" >Welcome</a></li>
-    <li class="large-2 medium-2 columns"><a href="#" >How it works</a></li>
+    <li class="medium-offset-2 medium-2 large-2 columns"><a class="white" href="" >&lt Welcome &gt</a></li>
+    <li class="large-2 medium-2 columns"><a class="white"href="#" >&lt How it works &gt</a></li>
     <!-- <li>XML Formatter</li> -->
-    <li class="large-2 medium-2 columns"><a href="#" >Products</a></li>
-    <li class="large-2 medium-2 columns end"><a href="#" >Contact</a></li>
+    <li class="large-2 medium-2 columns"><a class="white" href="#" >&lt Products &gt</a></li>
+    <li class="large-2 medium-2 columns end"><a class="white" href="#" >&lt Contact &gt</a></li>
   </ul>
-</div>
+</nav>
 
 <div id="paracontainer">
 
   <div id="parabackground" class="blueback">
     <article class="title white"> 
-      <h1>XML Formatter</h1>
+      <div><h1>&lt XML Formatter &gt</h1></div>
+      <h2>Powerful tool designed for files that matter</h2>
       <!-- meniul va fi cu font rosu si albastru text si brackets ca sa dam un effect de xml syntax -->
     </article>
   </div>
 
 </div>
-
+<div class="content-overlap whiteback">
 <div class="container">
 
+  <div class="row packs">
+    <div class="pr-head">
+      <h3>Princing Table</h3>
+    </div>  
+
+    <div class=" small-12 medium-3 columns">
+      <ul class="pr">
+        <li class="pr-title">Bronze</li>
+        <li class="pr-price">&#8364;25</li>
+        <li class="pr-descr bronze">Bronze Package</li>
+        <li class="pr-button"><a class="button small primary">Buy Now</a></li>
+      </ul>
+    </div>
+
+    <div class="small-12 medium-3 columns">
+      <ul class="pr">
+        <li class="pr-title">Silver</li>
+        <li class="pr-price">&#8364;50</li>
+        <li class="pr-descr silver">Silver Package</li>
+        <li class="pr-button"><a class="button small primary">Buy Now</a></li>
+      </ul>
+    </div>
+
+    <div class="small-12 medium-3 columns">
+      <ul class="pr">
+        <li class="pr-title">Gold</li>
+        <li class="pr-price">&#8364;75</li>
+        <li class="pr-descr gold">Golden Package</li>
+        <li class="pr-button"><a class="button small primary">Buy Now</a></li>
+      </ul>
+    </div>
+
+    <div class="small-12 medium-3 columns">
+      <ul class="pr">
+        <li class="pr-title">Custom</li>
+        <li class="pr-price">Negotiable</li>
+        <li class="pr-descr custom-color">Enterprise Package</li>
+        <li class="pr-button"><a class="button small primary" id="contactBtn">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="contactModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form name="modalform" method="post">
+      <table width="45%">
+      <!-- </tr> -->
+        <tr>
+          <td valign="top">
+            <label for="first_name">First Name *</label>
+          </td>
+          <td valign="top">
+            <input  type="text" name="first_name" maxlength="50" size="30">
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <label for="last_name">Last Name *</label>
+          </td>
+          <td valign="top">
+            <input  type="text" name="last_name" maxlength="50" size="30">
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <label for="email">Email Address *</label>
+          </td>
+          <td valign="top">
+          <input  type="text" name="email" maxlength="80" size="30">
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <label for="telephone">Telephone Number</label>
+          </td>
+          <td valign="top">
+            <input  type="text" name="telephone" maxlength="30" size="30">
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+            <label for="comments">Comments *</label>
+          </td>
+          <td valign="top">
+            <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align:center">
+            <input class="button secondary" type="submit" value="Submit"> 
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
 </div>
+  
+</div>
+</div>
+
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript" src="http://livejs.com/live.js"></script>
+  <script type="text/javascript">
+    // Get the modal
+    var modal = document.getElementById("contactModal");
+    //window.console.log(modal);
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("contactBtn");
+
+    // Get the span element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on span (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+    }
+
+  </script>
 
 {% endblock %}
 
