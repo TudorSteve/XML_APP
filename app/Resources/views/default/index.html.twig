@@ -10,33 +10,98 @@
 
 {% block body %}
 
-<nav id="navbar" class="">
-  <ul class="row white">
-    <li class="medium-offset-2 medium-2 large-2 columns"><a class="" href="#" >&lt Welcome &gt</a></li>
-    <li class="large-2 medium-2 columns"><a class="white"href="#" ><span class="red">&lt</span> How it works <span class="red">&gt</span></a></li>
+<nav id="navbar">
+  <ul class="row">
+    <li class="medium-3 large-3 columns">
+      <a name="link" class="white" href="#" >
+       <span class="red">&lt</span> 
+        Home
+        <span class="red">&gt</span>
+      </a>
+    </li>
+    <li class="large-3 medium-3 columns">
+      <a name="link" class="white" href="#" >
+        <span class="red">&lt</span> 
+        How it works 
+        <span class="red">&gt</span>
+      </a>
+    </li>
     <!-- <li>XML Formatter</li> -->
-    <li class="large-2 medium-2 columns"><a class="white" href="#" >&lt Products &gt</a></li>
-    <li class="large-2 medium-2 columns end"><a class="white" href="#" >&lt Contact &gt</a></li>
+    <li class="large-3 medium-3 columns">
+      <a name="link" class="white" href="#" >
+        <span class="red">&lt</span> 
+        Products
+        <span class="red">&gt</span>
+      </a>
+    </li>
+    <li class="large-3 medium-3 columns end">
+      <a name="link" class="white" href="#" >
+        <span class="red">&lt</span> 
+        Contact 
+        <span class="red">&gt</span>
+      </a>
+    </li>
   </ul>
 </nav>
 
 <div id="paracontainer">
 
   <div id="parabackground" class="blueback">
-    <article class="title white"> 
-      <div><h1>&lt  XML Formatter &gt</h1></div>
+    <article class="title white" > 
+      <div class="row">
+        <div class="small-10 medium-8 large-8 small-offset-1 medium-offset-2 large-offset-2 columns">
+          <div class="logo">
+            <span id="big"></span>
+            <span id="small"></span> 
+          </div>
+          <h1>&lt  XML Formatter &gt</h1>
+        </div>
+      </div>
       <h2>Powerful tool designed for files that matter</h2>
       <!-- meniul va fi cu font rosu si albastru text si brackets ca sa dam un effect de xml syntax -->
     </article>
   </div>
 
 </div>
+<div class="about whiteback">
+  <article>
+    <h1>XML Formatter</h1>
+    <h2> Product of russmedia tech</h2>
+    <h2>What is XML Formatter</h2>
+    <p> Bla bla blaba</p>
+    <h2>Why choose XML Formatter</h2>
+    <p>Lorem Ipsum</p>
+    <h2>See it in action below</h2>
+  </article>
+</div>
+
+<div id="paracontainer">
+  <div id="parabackground" class="before">
+  </div>
+</div>
+
+<div class="blueback">
+  <h2 class="white">BEFORE</h2>
+</div>
+
+<div class="line">
+</div>
+
+<div class="blueback">
+  <h2 class="red">AFTER</h2>
+</div>
+
+<div id="paracontainer">
+  <div id="parabackground" class="after">
+  </div>
+</div>
+
 <div id="content-overlap" class="whiteback">
 <div class="container">
 
   <div class="row packs">
     <div class="pr-head">
-      <h3>Princing Table</h3>
+      <h3>Pricing Table</h3>
     </div>  
 
     <div class=" small-12 medium-3 columns">
@@ -178,18 +243,18 @@
   <script type="text/javascript">
 var toggleposition = document.getElementById("paracontainer").offsetHeight;
 var navbar = document.getElementById("navbar");
-var navlinks = document.getElementsByClassName("white");
+var navlinks = document.getElementsByName("link");
 window.onscroll = function() {myFunction()};
 function myFunction() {
 
     // if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
         if (document.body.scrollTop >= toggleposition-50) {
         navbar.className = "whiteback";
-
+        navlinks.className = "blue";
     } else {
         navbar.className = navbar.className.replace("whiteback", "");
+        navlinks.className = "white";
     }
-    console.log(toggleposition);
 }
 
   </script>
